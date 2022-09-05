@@ -140,6 +140,32 @@ picture {
   color: var(--orange);
 }
 
+/* Thank you state */
+
+.thanks {
+  display: grid;
+  display: none;
+  justify-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.thanks * {
+  margin: 0;
+}
+
+.thanks img {
+  width: 52%;
+}
+
+.rating {
+  padding: 0.375em 0.75em;
+  background-color: var(--dark-blue);
+  color: var(--orange);
+  font-size: 0.875rem;
+  border-radius: 2em;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

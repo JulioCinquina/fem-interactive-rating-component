@@ -144,7 +144,6 @@ picture {
 /* Thank you state */
 
 .thanks {
-  display: grid;
   display: none;
   justify-items: center;
   text-align: center;

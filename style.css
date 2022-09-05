@@ -60,6 +60,11 @@ picture {
   font-size: 0.875rem;
 }
 
+
+.form__button {
+  display: block;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

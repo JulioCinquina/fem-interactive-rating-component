@@ -49,6 +49,7 @@ picture {
 }
 
 .survey img {
+  width: 2.375rem;
   background-color: var(--dark-blue);
   padding: 0.75rem;
   border-radius: 50%;

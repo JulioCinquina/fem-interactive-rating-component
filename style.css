@@ -60,6 +60,53 @@ picture {
   font-size: 0.875rem;
 }
 
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option {
+  --option-size: 2.625rem;
+  display: inline-grid;
+  place-items: center;
+}
+
+.option input,
+.option label {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.option input {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: var(--option-size);
+  height: var(--option-size);
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+}
+
+.option label {
+  color: var(--medium-grey);
+  line-height: var(--option-size);
+}
+
+.option input:is(:hover, :focus, :focus-visible) {
+  background-color: var(--medium-grey);
+}
+
+.option input:is(:hover, :focus, :focus-visible) + label {
+  color: var(--white);
+}
+
+.option input:checked {
+  background-color: var(--orange);
+}
+
+.option input:checked + label {
+  color: var(--white);
+}
 
 .form__button {
   display: block;

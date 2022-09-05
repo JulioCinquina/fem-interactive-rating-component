@@ -41,7 +41,10 @@ picture {
 .card {
   background-color: var(--very-dark-blue);
   width: min(20.375rem, 90%);
-  padding: 1.875rem 1.5rem;
+  min-height: 22.5rem;
+  display: grid;
+  place-items: center;
+  padding-inline: 1.5rem;
   border-radius: 0.875rem;
 }
 

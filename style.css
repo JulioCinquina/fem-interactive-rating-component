@@ -44,6 +44,11 @@ picture {
   padding-inline: 1.25rem;
 }
 
+.survey img {
+  background-color: var(--dark-blue);
+  padding: 0.75rem;
+  border-radius: 50%;
+}
 .attribution {
   font-size: 11px;
   text-align: center;

@@ -19,6 +19,10 @@
 body {
   min-height: 100vh;
   margin: 0;
+
+  background-color: var(--darkest-blue);
+  color: var(--white);
+
   font-family: "Overpass", sans-serif;
   font-size: 0.9375rem;
   font-weight: 400;

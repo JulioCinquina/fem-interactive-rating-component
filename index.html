@@ -24,27 +24,54 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <!-- Rating state start -->
+    <main>
+      <!-- Rating state start -->
+      <div class="survey">
+        <img src="./images/icon-star.svg" alt="" />
+        <h1 class="title">How did we do?</h1>
+        <p class="paragraph">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form action="" class="form">
+          <label class="form__label"
+            ><input type="radio" name="rating" class="form__input" value="1" />1
+          </label>
+          <label class="form__label"
+            ><input type="radio" name="rating" class="form__input" value="2" />2
+          </label>
+          <label class="form__label"
+            ><input type="radio" name="rating" class="form__input" value="3" />3
+          </label>
+          <label class="form__label">
+            <input type="radio" name="rating" class="form__input" value="4" />4
+          </label>
+          <label class="form__label">
+            <input type="radio" name="rating" class="form__input" value="5" />5
+          </label>
+          <button class="form__button">Submit</button>
+        </form>
+      </div>
+      <!-- Rating state end -->
 
-    How did we do? Please let us know how we did with your support request. All
-    feedback is appreciated to help us improve our offering! 1 2 3 4 5 Submit
+      <!-- Thank you state start -->
+      <div class="thanks" hidden>
+        <img src="./images/illustration-thank-you.svg" alt="" />
+        <p class="rating">You selected ${rating} out of 5</p>
+        <h2 class="title">Thank you!</h2>
+        <p class="paragraph">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Thank you state end -->
+    </main>
 
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch!
-
-    <!-- Thank you state end -->
-
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </footer>
   </body>
 </html>

@@ -1,5 +1,13 @@
 :root {
   box-sizing: border-box;
+
+  --orange: hsl(25, 97%, 53%); /* accent color */
+  --white: hsl(0, 0%, 100%); /* title, radio font active */
+  --light-grey: hsl(217, 12%, 63%); /* paragraph, radio font */
+  --medium-grey: hsl(216, 12%, 54%); /* radio bg active */
+  --dark-blue: hsl(213, 19%, 18%); /* radio bg */
+  --very-dark-blue: hsl(216, 12%, 8%); /* card bg */
+  --darkest-blue: hsl(228, 11%, 9%);
 }
 
 *,

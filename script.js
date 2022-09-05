@@ -8,6 +8,7 @@ const ratingEl = thanksEl.querySelector('.rating');
 const displayThanks = function () {
   surveyEl.style.display = 'none';
   thanksEl.style.display = 'grid';
+  ratingEl.focus();
 };
 
 const handleSubmit = function (event) {

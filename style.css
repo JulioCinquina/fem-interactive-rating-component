@@ -166,6 +166,12 @@ picture {
   border-radius: 2em;
 }
 
+.rating:focus {
+  /* This non-interactive element receives focus after the form is submitted */
+  /* This hides the outline that would be displayed */
+  outline: 3px solid transparent;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

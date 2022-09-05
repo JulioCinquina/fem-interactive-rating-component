@@ -38,6 +38,12 @@ picture {
   max-width: 100%;
 }
 
+.card {
+  background-color: var(--very-dark-blue);
+  width: min(20.375rem, 90%);
+  padding-inline: 1.25rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

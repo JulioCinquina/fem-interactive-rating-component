@@ -60,6 +60,7 @@ picture {
 .paragraph {
   margin-block-start: 0;
   margin-block-end: 1.875rem;
+  color: var(--light-grey);
   font-size: 0.875rem;
 }
 

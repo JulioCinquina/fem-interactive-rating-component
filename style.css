@@ -41,7 +41,8 @@ picture {
 .card {
   background-color: var(--very-dark-blue);
   width: min(20.375rem, 90%);
-  padding-inline: 1.25rem;
+  padding: 1.875rem 1.5rem;
+  border-radius: 0.875rem;
 }
 
 .survey img {
@@ -52,17 +53,20 @@ picture {
 
 .title {
   font-size: 1.5rem;
-  margin-block-end: 0.5rem;
+  line-height: 1;
+  margin-block-end: 1rem;
 }
 
 .paragraph {
   margin-block-start: 0;
+  margin-block-end: 1.875rem;
   font-size: 0.875rem;
 }
 
 .options {
   display: flex;
   justify-content: space-between;
+  margin-block-end: 1.5rem;
 }
 
 .option {

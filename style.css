@@ -3,10 +3,12 @@
 
   --orange: hsl(25, 97%, 53%); /* accent color */
   --white: hsl(0, 0%, 100%); /* title, radio font active */
-  --light-grey: hsl(217, 12%, 63%); /* paragraph, radio font, radio bg active */
-  --medium-grey: hsl(216, 12%, 54%); /* radio bg */
-  --dark-blue: hsl(213, 19%, 18%); /* card bg */
-  --very-dark-blue: hsl(216, 12%, 8%); /* body bg */
+  --light-grey: hsl(217, 12%, 63%); /* paragraph */
+  --medium-grey: hsl(216, 12%, 54%); /* radio label, radio hover bg */
+  --dark-blue: hsl(213, 19%, 18%); /* star icon bg, radio bg */
+  --very-dark-blue-1: hsl(215, 20%, 17%); /* card bg */
+  --very-dark-blue-2: hsl(215, 27%, 12%); /* card bg */
+  --darkest-blue: hsl(228, 11%, 9%);
 }
 
 *,
@@ -19,7 +21,7 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  background-color: #000;
+  background-color: var(--darkest-blue);
   color: var(--white);
 
   font-family: "Overpass", sans-serif;
@@ -39,7 +41,7 @@ picture {
 }
 
 .card {
-  background-color: var(--very-dark-blue);
+  background: linear-gradient(var(--very-dark-blue-1), var(--very-dark-blue-2));
   width: min(20.375rem, 90%);
   min-height: 22.5rem;
   display: grid;

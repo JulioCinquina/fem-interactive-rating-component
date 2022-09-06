@@ -191,3 +191,58 @@ picture {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media screen and (min-width: 48em) {
+  .card {
+    width: min(25.75rem, 90%);
+    min-height: 26rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
+  }
+
+  .survey img {
+    width: 3rem;
+    padding: 1rem;
+  }
+
+  .title {
+    margin-block-start: 2.25rem;
+    font-size: 1.75rem;
+  }
+
+  .paragraph {
+    font-size: 0.9375rem;
+  }
+
+  .options {
+    margin-block-end: 1.875rem;
+  }
+
+  .option {
+    --option-size: 3.25rem;
+  }
+
+  .thanks {
+    gap: 0;
+  }
+
+  .thanks img {
+    width: 10.125rem;
+    margin-block-end: 2rem;
+  }
+
+  .rating {
+    margin-block-end: 2.25rem;
+    padding: 0.375em 1.25em;
+    font-size: 0.9375rem;
+  }
+
+  .thanks .title {
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+  }
+
+  .thanks .paragraph {
+    padding-inline: 0.25rem;
+  }
+}

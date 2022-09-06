@@ -94,11 +94,13 @@ picture {
   height: var(--option-size);
   background-color: var(--dark-blue);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .option label {
   color: var(--medium-grey);
   line-height: var(--option-size);
+  cursor: pointer;
 }
 
 .option input:is(:hover, :focus, :focus-visible) {
@@ -139,6 +141,8 @@ picture {
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 0.125em;
+
+  cursor: pointer;
 }
 
 .form button:is(:hover, :focus, :focus-visible) {

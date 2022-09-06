@@ -105,6 +105,11 @@ picture {
   background-color: var(--medium-grey);
 }
 
+.option input:focus-visible {
+  outline: 4px dashed var(--white);
+  outline-offset: 6px;
+}
+
 .option input:is(:hover, :focus, :focus-visible) + label {
   color: var(--white);
 }
@@ -136,9 +141,14 @@ picture {
   letter-spacing: 0.125em;
 }
 
-.form button:hover {
+.form button:is(:hover, :focus, :focus-visible) {
   background-color: var(--white);
   color: var(--orange);
+}
+
+.form button:focus-visible {
+  outline: 4px dashed var(--white);
+  outline-offset: 6px;
 }
 
 /* Thank you state */

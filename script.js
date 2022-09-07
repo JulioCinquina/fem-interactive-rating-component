@@ -5,6 +5,15 @@ const surveyEl = document.querySelector('.survey');
 const thanksEl = document.querySelector('.thanks');
 const ratingEl = thanksEl.querySelector('.rating');
 
+const getSelectedRating = function () {
+  try {
+    const selectedRating = document.querySelector('input:checked').value;
+    return selectedRating;
+  } catch {
+    return null;
+  }
+};
+
 const displayThanks = function (selectedRating) {
   ratingEl.textContent = `You selected ${selectedRating} out of 5`;
   surveyEl.style.display = 'none';
@@ -13,8 +22,12 @@ const displayThanks = function (selectedRating) {
 };
 
 const handleSubmit = function (event) {
-  const selectedRating = formEl.querySelector('input:checked').value;
-  displayThanks(selectedRating);
+  const selectedRating = getSelectedRating();
+  if (selectedRating) {
+    displayThanks(selectedRating);
+  } else {
+    // Display error message
+  }
   event.preventDefault();
 };
 

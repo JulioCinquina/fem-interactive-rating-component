@@ -141,6 +141,30 @@ picture {
   color: var(--orange);
 }
 
+/* Error message */
+
+.form {
+  position: relative;
+}
+
+.error-message {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--orange);
+  opacity: 0;
+}
+
+.error-message.visible {
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+}
+
 /* Thank you state */
 
 .thanks {

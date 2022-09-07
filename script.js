@@ -2,6 +2,7 @@
 
 const formEl = document.querySelector('.form');
 const surveyEl = document.querySelector('.survey');
+const errorMessageEl = document.querySelector('.error-message');
 const thanksEl = document.querySelector('.thanks');
 const ratingEl = thanksEl.querySelector('.rating');
 
@@ -12,6 +13,12 @@ const getSelectedRating = function () {
   } catch {
     return null;
   }
+};
+
+const displayError = function () {
+  errorMessageEl.textContent = '';
+  errorMessageEl.textContent = 'Please select a value:';
+  errorMessageEl.classList.add('visible');
 };
 
 const displayThanks = function (selectedRating) {
@@ -26,7 +33,7 @@ const handleSubmit = function (event) {
   if (selectedRating) {
     displayThanks(selectedRating);
   } else {
-    // Display error message
+    displayError();
   }
   event.preventDefault();
 };

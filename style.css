@@ -3,10 +3,12 @@
 
   --orange: hsl(25, 97%, 53%); /* accent color */
   --white: hsl(0, 0%, 100%); /* title, radio font active */
-  --light-grey: hsl(217, 12%, 63%); /* paragraph, radio font, radio bg active */
-  --medium-grey: hsl(216, 12%, 54%); /* radio bg */
-  --dark-blue: hsl(213, 19%, 18%); /* card bg */
-  --very-dark-blue: hsl(216, 12%, 8%); /* body bg */
+  --light-grey: hsl(217, 12%, 63%); /* paragraph */
+  --medium-grey: hsl(216, 12%, 54%); /* radio label, radio hover bg */
+  --dark-blue: hsl(213, 19%, 18%); /* star icon bg, radio bg */
+  --very-dark-blue-1: hsl(215, 20%, 17%); /* card bg */
+  --very-dark-blue-2: hsl(215, 27%, 12%); /* card bg */
+  --darkest-blue: hsl(228, 11%, 9%);
 }
 
 *,
@@ -19,7 +21,7 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  background-color: #000;
+  background-color: var(--darkest-blue);
   color: var(--white);
 
   font-family: "Overpass", sans-serif;
@@ -39,7 +41,7 @@ picture {
 }
 
 .card {
-  background-color: var(--very-dark-blue);
+  background: linear-gradient(var(--very-dark-blue-1), var(--very-dark-blue-2));
   width: min(20.375rem, 90%);
   min-height: 22.5rem;
   display: grid;
@@ -94,15 +96,22 @@ picture {
   height: var(--option-size);
   background-color: var(--dark-blue);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .option label {
   color: var(--medium-grey);
   line-height: var(--option-size);
+  cursor: pointer;
 }
 
 .option input:is(:hover, :focus, :focus-visible) {
   background-color: var(--medium-grey);
+}
+
+.option input:focus-visible {
+  outline: 0.25rem dashed var(--white);
+  outline-offset: 0.375rem;
 }
 
 .option input:is(:hover, :focus, :focus-visible) + label {
@@ -134,11 +143,18 @@ picture {
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 0.125em;
+
+  cursor: pointer;
 }
 
-.form button:hover {
+.form button:is(:hover, :focus, :focus-visible) {
   background-color: var(--white);
   color: var(--orange);
+}
+
+.form button:focus-visible {
+  outline: 0.25rem dashed var(--white);
+  outline-offset: 0.375rem;
 }
 
 /* Error message */
@@ -203,4 +219,59 @@ picture {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 48em) {
+  .card {
+    width: min(25.75rem, 90%);
+    min-height: 26rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
+  }
+
+  .survey img {
+    width: 3rem;
+    padding: 1rem;
+  }
+
+  .title {
+    margin-block-start: 2.25rem;
+    font-size: 1.75rem;
+  }
+
+  .paragraph {
+    font-size: 0.9375rem;
+  }
+
+  .options {
+    margin-block-end: 1.875rem;
+  }
+
+  .option {
+    --option-size: 3.25rem;
+  }
+
+  .thanks {
+    gap: 0;
+  }
+
+  .thanks img {
+    width: 10.125rem;
+    margin-block-end: 2rem;
+  }
+
+  .rating {
+    margin-block-end: 2.25rem;
+    padding: 0.375em 1.25em;
+    font-size: 0.9375rem;
+  }
+
+  .thanks .title {
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+  }
+
+  .thanks .paragraph {
+    padding-inline: 0.25rem;
+  }
 }

@@ -8,7 +8,7 @@
   --dark-blue: hsl(213, 19%, 18%); /* star icon bg, radio bg */
   --very-dark-blue-1: hsl(215, 20%, 17%); /* card bg */
   --very-dark-blue-2: hsl(215, 27%, 12%); /* card bg */
-  --darkest-blue: hsl(228, 11%, 9%);
+  --darkest-blue: hsl(228, 11%, 9%); /* body bg */
 }
 
 *,
@@ -38,6 +38,10 @@ img,
 picture {
   display: block;
   max-width: 100%;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .card {
@@ -181,13 +185,60 @@ picture {
   transition: opacity 200ms ease-out;
 }
 
+/* Survey close animation */
+
+.survey.close {
+  /* Circular mask */
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 50%);
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 200% 200%;
+  mask-size: 200% 200%;
+
+  animation: close 400ms ease-out forwards;
+}
+
+@keyframes close {
+  from {
+    -webkit-mask-size: 200% 200%;
+    mask-size: 200% 200%;
+  }
+
+  to {
+    -webkit-mask-size: 0% 0%;
+    mask-size: 0% 0%;
+  }
+}
+
 /* Thank you state */
 
 .thanks {
   display: none;
+  opacity: 0;
   justify-items: center;
   text-align: center;
   gap: 1.5rem;
+}
+
+.thanks.visible {
+  display: grid;
+  animation: fade-in 1000ms linear 300ms forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .thanks * {

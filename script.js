@@ -18,9 +18,20 @@ const displayError = function () {
 
 const displayThanks = function (selectedRating) {
   ratingEl.textContent = `You selected ${selectedRating} out of 5`;
-  surveyEl.style.display = 'none';
-  thanksEl.style.display = 'grid';
-  ratingEl.focus();
+
+  // Hides survey and shows thanks state after "close" animation
+  surveyEl.addEventListener(
+    'animationend',
+    () => {
+      surveyEl.classList.add('hidden');
+      thanksEl.classList.add('visible');
+      ratingEl.focus(); // Directs screen reader focus to top element of thanks
+    },
+    { once: true }
+  );
+
+  // Plays "close" animation
+  surveyEl.classList.add('close');
 };
 
 const handleSubmit = function (event) {

@@ -327,3 +327,22 @@ picture {
     padding-inline: 0.25rem;
   }
 }
+
+/* Turns off animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;
+  }
+
+  /* Prevents flicker caused by mask closing for a split second */
+  .survey.close {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+}

@@ -4,7 +4,8 @@
   --orange: hsl(25, 97%, 53%); /* accent color */
   --white: hsl(0, 0%, 100%); /* title, radio font active */
   --light-grey: hsl(217, 12%, 63%); /* paragraph */
-  --medium-grey: hsl(216, 12%, 54%); /* radio label, radio hover bg */
+  --medium-grey-text: hsl(216, 12%, 59%); /* radio label */
+  --medium-grey-bg: hsl(219, 12%, 48%); /* radio hover bg */
   --dark-blue: hsl(213, 19%, 18%); /* star icon bg, radio bg */
   --very-dark-blue-1: hsl(215, 20%, 17%); /* card bg */
   --very-dark-blue-2: hsl(215, 27%, 12%); /* card bg */
@@ -104,13 +105,13 @@ picture {
 }
 
 .option label {
-  color: var(--medium-grey);
+  color: var(--medium-grey-text);
   line-height: var(--option-size);
   cursor: pointer;
 }
 
 .option input:is(:hover, :focus, :focus-visible) {
-  background-color: var(--medium-grey);
+  background-color: var(--medium-grey-bg);
 }
 
 .option input:focus-visible {

@@ -7,12 +7,7 @@ const thanksEl = document.querySelector('.thanks');
 const ratingEl = thanksEl.querySelector('.rating');
 
 const getSelectedRating = function () {
-  try {
-    const selectedRating = document.querySelector('input:checked').value;
-    return selectedRating;
-  } catch {
-    return null;
-  }
+  return document.querySelector('input:checked')?.value;
 };
 
 const displayError = function () {

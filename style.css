@@ -268,11 +268,12 @@ picture {
 
 .attribution {
   font-size: 0.6875rem;
+  color: var(--light-grey);
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: inherit;
 }
 
 @media screen and (min-width: 48em) {

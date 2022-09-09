@@ -51,6 +51,7 @@ picture {
   min-height: 22.5rem;
   display: grid;
   place-items: center;
+  padding-block: 1.5rem;
   padding-inline: 1.5rem;
   border-radius: 0.875rem;
 }
@@ -278,6 +279,7 @@ picture {
   .card {
     width: min(25.75rem, 90%);
     min-height: 26rem;
+    padding-block: 2rem;
     padding-inline: 2rem;
     border-radius: 2rem;
   }

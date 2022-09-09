@@ -78,6 +78,7 @@ picture {
 .options {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-block-end: 1.5rem;
 }
 

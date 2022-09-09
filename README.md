@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution on Frontend Mentor]()
-- [Live Site on GitHub Pages]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/accessible-rating-component-with-css-animations-0Hdbenkf-5)
+- [Live Site on GitHub Pages](https://juliocinquina.github.io/fem-interactive-rating-component/)
 
 ### Screenshots
 
